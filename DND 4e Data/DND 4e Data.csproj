@@ -8,7 +8,7 @@
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>DaanV2.DND</RootNamespace>
-    <AssemblyName>DND 4e Data</AssemblyName>
+    <AssemblyName>Data</AssemblyName>
     <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
@@ -39,6 +39,7 @@
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -71,6 +72,15 @@
     <Compile Include="Classes\Hitpoints\Hitpoints - Initialize.cs" />
     <Compile Include="Classes\Hitpoints\Hitpoints - Properties.cs" />
     <Compile Include="Classes\Hitpoints\Hitpoints - Variables.cs" />
+    <Compile Include="Classes\Power Attribute\Power Attribute - Initialize.cs" />
+    <Compile Include="Classes\Power Attribute\Power Attribute - Properties.cs" />
+    <Compile Include="Classes\Power Attribute\Power Attribute - Variables.cs" />
+    <Compile Include="Classes\Power Information\Power Information - Initialize.cs" />
+    <Compile Include="Classes\Power Information\Power Information - Properties.cs" />
+    <Compile Include="Classes\Power Information\Power Information - Variables.cs" />
+    <Compile Include="Classes\Power\Power - Initialize.cs" />
+    <Compile Include="Classes\Power\Power - Properties.cs" />
+    <Compile Include="Classes\Power\Power - Variables.cs" />
     <Compile Include="Classes\SkillScore\SkillScore - Initialize.cs" />
     <Compile Include="Classes\SkillScore\SkillScore - Properties.cs" />
     <Compile Include="Classes\SkillScore\SkillScore - Variables.cs" />

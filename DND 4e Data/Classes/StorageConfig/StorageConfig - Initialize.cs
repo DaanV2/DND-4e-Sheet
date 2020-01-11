@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DaanV2.DND {
     ///DOLATER <summary>add description for class: StorageConfig</summary>
+    [Serializable, DataContract]
     public partial class StorageConfig {
         /// <summary>Creates a new instance of <see cref="StorageConfig"/></summary>
         public StorageConfig() {

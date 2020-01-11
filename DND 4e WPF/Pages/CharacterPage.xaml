@@ -1,0 +1,27 @@
+﻿<Page x:Name="page" x:Class="DaanV2.DND.Pages.CharacterPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DaanV2.DND.Pages"
+      xmlns:usercontrols="clr-namespace:DaanV2.DND.UserControls"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CharacterPage">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <Menu>
+            <MenuItem Header="_Save" x:Name="MenuSaveButton"/>
+            <MenuItem Header="_Close" x:Name="MenuCloseButton"/>
+        </Menu>
+        
+        <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
+            <usercontrols:AbilityScoresControl DataContext="{Binding DataContext.AbilityScores, ElementName=page}"/>
+            <usercontrols:SkillsControl DataContext="{Binding DataContext.Skills, ElementName=page}"/>
+        </WrapPanel>
+    </Grid>
+</Page>

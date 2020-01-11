@@ -1,0 +1,16 @@
+﻿<UserControl x:Name="userControl" x:Class="DaanV2.DND.UserControls.SkillScoreControl"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DaanV2.DND.UserControls"
+             mc:Ignorable="d" 
+             d:DesignHeight="50" d:DesignWidth="250">
+    <StackPanel Orientation="Horizontal">
+        <TextBox x:Name="Bonus" Text="{Binding DataContext.Bonus, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
+        <TextBlock x:Name="SkillName" Text="{Binding DataContext.Name, ElementName=userControl, FallbackValue=Skill, Mode=TwoWay}" />
+        <CheckBox IsChecked="{Binding DataContext.Trained, ElementName=userControl, FallbackValue=false, Mode=TwoWay}"/>
+        <TextBox x:Name="ArmorPenalty" Text="{Binding DataContext.ArmorPenalty, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
+        <TextBox x:Name="Misc" Text="{Binding DataContext.Misc, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
+    </StackPanel>
+</UserControl>

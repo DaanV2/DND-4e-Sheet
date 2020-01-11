@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace DaanV2.DND {
     ///DOLATER <summary>add description for class: AbilityScores</summary>
+    [Serializable, DataContract]
     public partial class AbilityScores {
         /// <summary>Creates a new instance of <see cref="AbilityScores"/></summary>
         public AbilityScores() {
