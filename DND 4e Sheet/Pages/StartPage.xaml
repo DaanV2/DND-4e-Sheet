@@ -5,26 +5,24 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:DaanV2.DND.Pages"
       xmlns:usercontrols="clr-namespace:DaanV2.DND.UserControls"
-      xmlns:DND="clr-namespace:DaanV2.DND" x:Class="DaanV2.DND.Pages.StartPage"
+      xmlns:DND="clr-namespace:DaanV2.DND" x:Name="page" x:Class="DaanV2.DND.Pages.StartPage"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
       Title="StartPage">
-
     <Page.DataContext>
         <DND:StartPageViewModel/>
     </Page.DataContext>
 
-    <WrapPanel>
-        <Button x:Name="NewButton" Click="NewButton_Click" Content="New Character"/>
-
-        <ItemsControl ItemsSource="{Binding DataContext.Characters, ElementName=userControl}">
-            <ItemsControl.ItemTemplate>
-                <DataTemplate>
-                    <Button DataContext="{Binding}" Click="Character_Click">
-                        <usercontrols:CharacterFileControl DataContext="{Binding}"/>
-                    </Button>
-                </DataTemplate>
-            </ItemsControl.ItemTemplate>
-        </ItemsControl>
-    </WrapPanel>
+    <ItemsControl ItemsSource="{Binding DataContext.Characters, ElementName=page}">
+        <ItemsControl.ItemTemplate>
+            <DataTemplate>
+                <usercontrols:CharacterFileControl DataContext="{Binding}"/>
+            </DataTemplate>
+        </ItemsControl.ItemTemplate>
+        <ItemsControl.ItemsPanel>
+            <ItemsPanelTemplate>
+                <UniformGrid IsItemsHost="True" />
+            </ItemsPanelTemplate>
+        </ItemsControl.ItemsPanel>
+    </ItemsControl>
 </Page>

@@ -22,26 +22,5 @@ namespace DaanV2.DND.Pages {
         public StartPage() {
             InitializeComponent();
         }
-
-        private void NewButton_Click(Object sender, RoutedEventArgs e) {
-            SaveFileDialog SFD = new SaveFileDialog() {
-                Title = "New character",
-                Filter = "json file|*.json",
-                InitialDirectory = Storage.Config.CharacterFolder,
-                AddExtension = true
-            };
-
-            if (SFD.ShowDialog() == true) {
-                String Name = System.IO.Path.GetFileNameWithoutExtension(SFD.FileName);
-                CharacterSheet Character = new CharacterSheet();
-                Character.Details.Name = Name;
-                Storage.Set(Character);
-                PageController.Load(CharacterController.LoadCharacter(Character));
-            }
-        }
-
-        private void Character_Click(Object sender, RoutedEventArgs e) {
-
-        }   
     }
 }

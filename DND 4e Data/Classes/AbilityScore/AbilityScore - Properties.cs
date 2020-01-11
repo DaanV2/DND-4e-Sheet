@@ -8,7 +8,6 @@ namespace DaanV2.DND {
         public Int32 Score { get => this._Score; set => this._Score = value; }
 
         /// <summary>Gets the modifier of this score</summary>
-        [DataMember]
         public Int32 Modifier { get => (this.Score - 10) / 2; }
     }
 }

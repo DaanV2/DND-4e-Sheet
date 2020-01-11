@@ -1,4 +1,5 @@
-﻿using System.Runtime.Serialization;
+﻿using System.Collections.Generic;
+using System.Runtime.Serialization;
 
 namespace DaanV2.DND {
     public partial class CharacterSheet {
@@ -18,6 +19,6 @@ namespace DaanV2.DND {
         /// 
         /// </summary>
         [DataMember]
-        public Skills Skills { get; set; }
+        public List<SkillScore> Skills { get; set; }
     }
 }

@@ -84,9 +84,6 @@
     <Compile Include="Classes\SkillScore\SkillScore - Initialize.cs" />
     <Compile Include="Classes\SkillScore\SkillScore - Properties.cs" />
     <Compile Include="Classes\SkillScore\SkillScore - Variables.cs" />
-    <Compile Include="Classes\Skills\Skills - Initialize.cs" />
-    <Compile Include="Classes\Skills\Skills - Properties.cs" />
-    <Compile Include="Classes\Skills\Skills - Variables.cs" />
     <Compile Include="Classes\StorageConfig\StorageConfig - Initialize.cs" />
     <Compile Include="Classes\StorageConfig\StorageConfig - Properties.cs" />
     <Compile Include="Classes\StorageConfig\StorageConfig - INewConfig.cs" />

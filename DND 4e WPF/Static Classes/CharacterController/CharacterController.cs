@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Controls;
 using DaanV2.DND.Pages;
+using Microsoft.Win32;
 
 namespace DaanV2.DND {
     ///DOLATER <summary>add description for class: CharacterController</summary>
@@ -25,6 +26,23 @@ namespace DaanV2.DND {
                 DataContext = Character
             };
             return Page;
+        }
+
+        public static void NewCharacter() {
+            SaveFileDialog SFD = new SaveFileDialog() {
+                Title = "New character",
+                Filter = "json file|*.json",
+                InitialDirectory = Storage.Config.CharacterFolder,
+                AddExtension = true
+            };
+
+            if (SFD.ShowDialog() == true) {
+                String Name = System.IO.Path.GetFileNameWithoutExtension(SFD.FileName);
+                CharacterSheet Character = new CharacterSheet();
+                Character.Details.Name = Name;
+                Storage.Set(Character);
+                PageController.Load(CharacterController.LoadCharacter(Character));
+            }
         }
     }
 }

@@ -27,7 +27,7 @@ namespace DaanV2.DND {
         /// </summary>
         /// <returns></returns>
         public static String[] GetFiles() {
-            return Directory.GetFiles(Storage.Config.CharacterFolder, ".json", SearchOption.AllDirectories);
+            return Directory.GetFiles(Storage.Config.CharacterFolder, "*.json", SearchOption.AllDirectories);
         }
     }
 }

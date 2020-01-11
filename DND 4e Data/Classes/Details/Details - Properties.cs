@@ -16,7 +16,6 @@ namespace DaanV2.DND {
         /// <summary>
         /// 
         /// </summary>
-        [DataMember]
         public Int32 HalfLevel { get => this.Level / 2; }
 
         /// <summary>
