@@ -9,7 +9,7 @@ namespace DaanV2.DND {
         public CharacterSheet() {
             this.AbilityScores = new AbilityScores();
             this.Details = new Details();
-            this.Skills = SkillScore.Create(this.Details, this.AbilityScores);
+            this.Skills = SkillScore.Create();
         }
     }
 }

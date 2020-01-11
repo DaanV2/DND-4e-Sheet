@@ -14,6 +14,7 @@ namespace DND_4e_Sheet {
     public partial class App : Application {
         private void Application_Startup(Object sender, StartupEventArgs e) {
             ConfigMapper.Preload(true);
+            ResourceDictionary RS = new ResourceDictionary();
         }
     }
 }

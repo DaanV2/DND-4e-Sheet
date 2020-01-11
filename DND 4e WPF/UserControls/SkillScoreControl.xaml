@@ -4,13 +4,18 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
-             mc:Ignorable="d" 
-             d:DesignHeight="50" d:DesignWidth="250">
-    <StackPanel Orientation="Horizontal">
-        <TextBox x:Name="Bonus" Text="{Binding DataContext.Bonus, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
-        <TextBlock x:Name="SkillName" Text="{Binding DataContext.Name, ElementName=userControl, FallbackValue=Skill, Mode=TwoWay}" />
-        <CheckBox IsChecked="{Binding DataContext.Trained, ElementName=userControl, FallbackValue=false, Mode=TwoWay}"/>
-        <TextBox x:Name="ArmorPenalty" Text="{Binding DataContext.ArmorPenalty, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
-        <TextBox x:Name="Misc" Text="{Binding DataContext.Misc, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
-    </StackPanel>
+             mc:Ignorable="d" d:DesignHeight="50" d:DesignWidth="350">
+        
+    <DockPanel>
+        <TextBox x:Name="Bonus"  DockPanel.Dock="Left" Width="40" TextAlignment="Center"
+            Text="{Binding DataContext.Bonus, ElementName=userControl, FallbackValue=0, Mode=OneWay}" MaxLines="1"/>
+        <CheckBox x:Name="Trained" DockPanel.Dock="Right"
+            IsChecked="{Binding DataContext.Trained, ElementName=userControl, FallbackValue=false, Mode=TwoWay}" VerticalAlignment="Center"/>
+        <TextBox x:Name="ArmorPenalty" DockPanel.Dock="Right" Width="40" TextAlignment="Center"
+            Text="{Binding DataContext.ArmorPenalty, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
+        <TextBox x:Name="Misc" DockPanel.Dock="Right" Width="40" TextAlignment="Center"
+            Text="{Binding DataContext.Misc, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
+        <Label x:Name="SkillName" VerticalAlignment="Center"
+            Content="{Binding DataContext.Name, ElementName=userControl, FallbackValue=Skill, Mode=TwoWay}"/>
+    </DockPanel>
 </UserControl>

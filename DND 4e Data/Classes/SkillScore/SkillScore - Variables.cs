@@ -6,14 +6,5 @@ using System.Threading.Tasks;
 
 namespace DaanV2.DND {
     public partial class SkillScore {
-        /// <summary>
-        /// 
-        /// </summary>
-        private AbilityScore _Base;
-
-        /// <summary>
-        /// 
-        /// </summary>
-        private Details _Details;
     }
 }

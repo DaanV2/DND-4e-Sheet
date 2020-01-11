@@ -4,7 +4,8 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
-             xmlns:Converters="clr-namespace:DaanV2.DND.Converters;assembly=Data-Wpf" x:Name="userControl" x:Class="DaanV2.DND.UserControls.CharacterFileControl"
+             xmlns:Converters="clr-namespace:DaanV2.DND.Converters;assembly=Data-Wpf" 
+             x:Name="userControl" x:Class="DaanV2.DND.UserControls.CharacterFileControl"
              mc:Ignorable="d" 
              d:DesignHeight="56" d:DesignWidth="56">
 
