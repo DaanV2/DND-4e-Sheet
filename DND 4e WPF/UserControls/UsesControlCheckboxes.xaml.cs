@@ -8,6 +8,7 @@ namespace DaanV2.DND.UserControls {
         public Uses ViewModel { get => (Uses)this.DataContext; set => this.DataContext = value; }
 
         public UsesControlCheckboxes() {
+            Console.WriteLine($"{nameof(UsesControlCheckboxes)} Loaded");
             this.InitializeComponent();
         }
 
@@ -17,10 +18,10 @@ namespace DaanV2.DND.UserControls {
         /// <param name="sender"></param>
         /// <param name="e"></param>
         private void userControl_DataContextChanged(Object sender, DependencyPropertyChangedEventArgs e) {
-            if (this.Main == null)
+            if (this.MainGrid == null)
                 return;
 
-            this.Main.Children.Clear();
+            this.MainGrid.Children.Clear();
 
             if (this.ViewModel != null) {
                 Uses uses = this.ViewModel;
@@ -33,7 +34,7 @@ namespace DaanV2.DND.UserControls {
                     CB.Checked += this.CB_Checked;
                     CB.Unchecked += this.CB_Unchecked;
 
-                    this.Main.Children.Add(CB);
+                    this.MainGrid.Children.Add(CB);
                 }
             }
         }

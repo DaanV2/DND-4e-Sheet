@@ -8,17 +8,18 @@ namespace DaanV2.DND.UserControls {
     /// </summary>
     public partial class UsesControl : UserControl {
         public UsesControl() {
+            Console.WriteLine($"{nameof(UsesControl)} Loaded");
             this.InitializeComponent();
         }
 
         private void userControl_SizeChanged(Object sender, SizeChangedEventArgs e) {
-            if (this.CheckBoxes.Width > e.NewSize.Width) {
-                this.CheckBoxes.Visibility = Visibility.Collapsed;
-                this.Counter.Visibility = Visibility.Visible;
+            if (this.UsesCheckBoxes.Width > e.NewSize.Width) {
+                this.UsesCheckBoxes.Visibility = Visibility.Collapsed;
+                this.UsesCounter.Visibility = Visibility.Visible;
             }
             else {
-                this.CheckBoxes.Visibility = Visibility.Visible;
-                this.Counter.Visibility = Visibility.Collapsed;
+                this.UsesCheckBoxes.Visibility = Visibility.Visible;
+                this.UsesCounter.Visibility = Visibility.Collapsed;
             }
         }
     }

@@ -11,12 +11,12 @@
         <DND:CharacterSheet/>
     </Page.DataContext>
 
-    <StackPanel>        
-        <usercontrols:AbilityScoresFancyControl DataContext="{Binding DataContext.AbilityScores, ElementName=page}" 
+    <StackPanel>
+        <usercontrols:AbilityScoresFancyControl DataContext="{Binding DataContext.AbilityScores}" 
             Height="120"/>
-        <TabControl x:Name="CharacterThings" Grid.Row="1">
-            <TabItem Header="_Powers" x:Name="CharacterPowers">
-                <usercontrols:PowerCollectionControl DataContext="{Binding DataContext.Powers, ElementName=page}"/>
+        <TabControl x:Name="CharacterThings" Grid.Row="1" DataContext="{Binding DataContext.Powers}">
+            <TabItem Header="_Powers" x:Name="CharacterPowers" DataContext="{Binding DataContext}">
+                <usercontrols:PowerCollectionControl DataContext="{Binding DataContext, ElementName=CharacterPowers}"/>
             </TabItem>
         </TabControl>
     </StackPanel>

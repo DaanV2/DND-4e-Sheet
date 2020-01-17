@@ -8,7 +8,7 @@
     xmlns:DND="clr-namespace:DaanV2.DND;assembly=Data" 
     x:Name="userControl"
              x:Class="DaanV2.DND.UserControls.UsesControl"
-             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800" SizeChanged="userControl_SizeChanged" >
+             mc:Ignorable="d" d:DesignHeight="100" d:DesignWidth="200" SizeChanged="userControl_SizeChanged" >
     
     <UserControl.Resources>
         <Converters:NullToVisiblityConverter x:Key="NullToVisiblityConverter"/>
@@ -20,7 +20,7 @@
         <DND:Uses/>
     </UserControl.DataContext>
 
-    <StackPanel x:Name="userControl">
+    <StackPanel x:Name="MainGrid">
         <local:UsesControlCounter DataContext="{Binding DataContext, ElementName=userControl}" x:Name="UsesCounter"/>
         <local:UsesControlCheckboxes DataContext="{Binding DataContext, ElementName=userControl}" x:Name="UsesCheckBoxes"/>
     </StackPanel>

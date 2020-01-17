@@ -9,11 +9,7 @@
              x:Class="DaanV2.DND.UserControls.PowerCollectionControl"
              mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
 
-    <UserControl.DataContext>
-        <DND:Power/>
-    </UserControl.DataContext>
-
-    <ItemsControl ItemsSource="{Binding DataContext, ElementName=userControl}">
+    <ItemsControl x:Name="Powers" ItemsSource="{Binding DataContext}" >
         <ItemsControl.ItemTemplate>
             <DataTemplate>
                 <local:PowerControl DataContext="{Binding}" />
@@ -21,7 +17,7 @@
         </ItemsControl.ItemTemplate>
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
-                <WrapPanel IsItemsHost="true" x:Name="MainGrid"/>
+                <WrapPanel IsItemsHost="true" x:Name="MainGrid" DataContext="{Binding DataContext}"/>
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
     </ItemsControl>

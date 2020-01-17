@@ -9,6 +9,7 @@ namespace DaanV2.DND.UserControls {
     /// </summary>
     public partial class TitleTextBoxVertical : UserControl {
         public TitleTextBoxVertical() {
+            Console.WriteLine($"{nameof(TitleTextBoxVertical)} Loaded");
             this.InitializeComponent();
         }
 
