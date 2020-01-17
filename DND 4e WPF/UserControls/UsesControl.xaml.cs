@@ -1,17 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace DaanV2.DND.UserControls {
     /// <summary>
@@ -19,7 +8,18 @@ namespace DaanV2.DND.UserControls {
     /// </summary>
     public partial class UsesControl : UserControl {
         public UsesControl() {
-            InitializeComponent();
+            this.InitializeComponent();
+        }
+
+        private void userControl_SizeChanged(Object sender, SizeChangedEventArgs e) {
+            if (this.CheckBoxes.Width > e.NewSize.Width) {
+                this.CheckBoxes.Visibility = Visibility.Collapsed;
+                this.Counter.Visibility = Visibility.Visible;
+            }
+            else {
+                this.CheckBoxes.Visibility = Visibility.Visible;
+                this.Counter.Visibility = Visibility.Collapsed;
+            }
         }
     }
 }

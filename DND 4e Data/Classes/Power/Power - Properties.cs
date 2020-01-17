@@ -14,7 +14,7 @@ namespace DaanV2.DND {
         /// 
         /// </summary>
         [DataMember]
-        public Boolean[] Uses { get; set; }
+        public Uses Uses { get; set; }
 
         /// <summary>
         /// 

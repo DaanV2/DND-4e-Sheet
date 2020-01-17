@@ -56,6 +56,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Converters\Classes\NullToVisiblityConverter\NullToVisiblityConverter.cs" />
+    <Compile Include="Converters\Classes\PowerToBrush\PowerToBrush.cs" />
+    <Compile Include="Converters\Classes\StringArrayConverter\StringArrayConverter.cs" />
+    <Compile Include="Converters\Classes\StringCheckToVisiblityConverter\StringCheckToVisiblityConverter.cs" />
+    <Compile Include="Interfaces\IViewModel\IViewModel.cs" />
     <Compile Include="Pages\CharacterPage.xaml.cs">
       <DependentUpon>CharacterPage.xaml</DependentUpon>
     </Compile>
@@ -78,8 +82,20 @@
     <Compile Include="UserControls\AbilityScoreControl.xaml.cs">
       <DependentUpon>AbilityScoreControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\AbilityScoreFancyControl.xaml.cs">
+      <DependentUpon>AbilityScoreFancyControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\AbilityScoresControl.xaml.cs">
       <DependentUpon>AbilityScoresControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\AbilityScoresFancyControl.xaml.cs">
+      <DependentUpon>AbilityScoresFancyControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PowerCollectionControl.xaml.cs">
+      <DependentUpon>PowerCollectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PowerControl.xaml.cs">
+      <DependentUpon>PowerControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\SkillsControl.xaml.cs">
       <DependentUpon>SkillsControl.xaml</DependentUpon>
@@ -87,8 +103,20 @@
     <Compile Include="UserControls\SkillScoreControl.xaml.cs">
       <DependentUpon>SkillScoreControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\TitleTextBox.xaml.cs">
+      <DependentUpon>TitleTextBox.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\TitleTextBoxVertical.xaml.cs">
+      <DependentUpon>TitleTextBoxVertical.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\UsesControl.xaml.cs">
       <DependentUpon>UsesControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UsesControlCheckboxes.xaml.cs">
+      <DependentUpon>UsesControlCheckboxes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\UsesControlCounter.xaml.cs">
+      <DependentUpon>UsesControlCounter.xaml</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -115,7 +143,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\AbilityScoreFancyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\AbilityScoresControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\AbilityScoresFancyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PowerCollectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\PowerControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -127,7 +171,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\TitleTextBox.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\TitleTextBoxVertical.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\UsesControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UsesControlCheckboxes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\UsesControlCounter.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

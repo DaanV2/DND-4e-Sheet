@@ -10,7 +10,6 @@ namespace DaanV2.DND {
     [Serializable, DataContract]
     public partial class PowerAttribute {
         /// <summary>Creates a new instance of <see cref="PowerAttribute"/></summary>
-
         public PowerAttribute() {
             this.Name = String.Empty;
             this.Value = String.Empty;

@@ -13,16 +13,22 @@
         <DND:StartPageViewModel/>
     </Page.DataContext>
 
-    <ItemsControl ItemsSource="{Binding DataContext.Characters, ElementName=page}">
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <usercontrols:CharacterFileControl DataContext="{Binding}"/>
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <UniformGrid IsItemsHost="True" />
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-    </ItemsControl>
+    <StackPanel Orientation="Horizontal">
+        <StackPanel>
+            <Button Content="New" x:Name="ButtonNewCharacter" Click="ButtonNewCharacter_Click"/>
+        </StackPanel>
+
+        <ItemsControl ItemsSource="{Binding DataContext.Characters, ElementName=page}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <usercontrols:CharacterFileControl DataContext="{Binding}"/>
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <UniformGrid IsItemsHost="True" />
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </StackPanel>
 </Page>

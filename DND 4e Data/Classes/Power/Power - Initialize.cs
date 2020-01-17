@@ -10,7 +10,7 @@ namespace DaanV2.DND {
         public Power() {
             this.Attributes = new List<PowerAttribute>();
             this.Info = new PowerInformation();
-            this.Uses = new Boolean[1];
+            this.Uses = new Uses();
         }
     }
 }

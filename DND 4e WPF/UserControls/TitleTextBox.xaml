@@ -1,0 +1,24 @@
+﻿<UserControl
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:DaanV2.DND.UserControls"
+             xmlns:Converters="clr-namespace:DaanV2.DND.Converters" 
+    x:Name="userControl" x:Class="DaanV2.DND.UserControls.TitleTextBox"
+             mc:Ignorable="d" d:DesignHeight="40" d:DesignWidth="100">
+    <UserControl.Resources>
+        <Converters:StringCheckToVisiblityConverter x:Key="StringCheckToVisiblityConverter"/>
+    </UserControl.Resources>
+    <UserControl.Visibility>
+        <Binding Converter="{StaticResource StringCheckToVisiblityConverter}" ElementName="userControl" Path="TextValue"/>
+    </UserControl.Visibility>
+
+    <StackPanel>
+        <StackPanel Orientation="Horizontal">
+            <Label x:Name="userControl" Content="{Binding TitleText, ElementName=userControl}"/>
+            <TextBlock x:Name="userControl" Text="{Binding TextValue, ElementName=userControl}"/>
+        </StackPanel>
+        <Separator/>
+    </StackPanel>
+</UserControl>

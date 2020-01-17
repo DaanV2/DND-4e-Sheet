@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using System.Runtime.Serialization;
 
 namespace DaanV2.DND {
@@ -10,6 +11,7 @@ namespace DaanV2.DND {
             this.AbilityScores = new AbilityScores();
             this.Details = new Details();
             this.Skills = SkillScore.Create();
+            this.Powers = new List<Power>();
         }
     }
 }

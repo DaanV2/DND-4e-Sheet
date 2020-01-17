@@ -4,14 +4,15 @@ using System.Windows.Controls;
 
 namespace DaanV2.DND.UserControls {
     /// <summary>
-    /// Interaction logic for AbilityScoreControl.xaml
+    /// Interaction logic for AbilityScoreFancyControl.xaml
     /// </summary>
-    public partial class AbilityScoreControl : UserControl, INotifyPropertyChanged {
+    public partial class AbilityScoreFancyControl : UserControl, INotifyPropertyChanged {
+
         private String _Title;
 
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public AbilityScoreControl() {
+        public AbilityScoreFancyControl() {
             this.Title = String.Empty;
             this.InitializeComponent();
         }

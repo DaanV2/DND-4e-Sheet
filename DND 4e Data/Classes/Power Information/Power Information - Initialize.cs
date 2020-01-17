@@ -15,7 +15,7 @@ namespace DaanV2.DND {
             this.Defense = String.Empty;
             this.Description = String.Empty;
             this.Encounter = false;
-            this.Keywords = new String[] { };
+            this.Keywords = Array.Empty<String>();
             this.Range = String.Empty;
             this.Target = String.Empty;
             this.Title = String.Empty;

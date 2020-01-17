@@ -40,6 +40,8 @@ namespace DaanV2.DND {
                 String Name = System.IO.Path.GetFileNameWithoutExtension(SFD.FileName);
                 CharacterSheet Character = new CharacterSheet();
                 Character.Details.Name = Name;
+                Character.Powers.Add(new Power());
+
                 Storage.Set(Character);
                 PageController.Load(CharacterController.LoadCharacter(Character));
             }

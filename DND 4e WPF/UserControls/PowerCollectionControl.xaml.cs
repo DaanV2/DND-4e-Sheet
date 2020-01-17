@@ -12,19 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using Microsoft.Win32;
 
-namespace DaanV2.DND.Pages {
+namespace DaanV2.DND.UserControls {
     /// <summary>
-    /// Interaction logic for StartPage.xaml
+    /// Interaction logic for PowerCollectionControl.xaml
     /// </summary>
-    public partial class StartPage : Page {
-        public StartPage() {
+    public partial class PowerCollectionControl : UserControl {
+        public PowerCollectionControl() {
             InitializeComponent();
-        }
-
-        private void ButtonNewCharacter_Click(Object sender, RoutedEventArgs e) {
-            CharacterController.NewCharacter();
         }
     }
 }

@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
              xmlns:dnd="clr-namespace:DaanV2.DND;assembly=Data"
-             mc:Ignorable="d" d:DesignHeight="60" d:DesignWidth="250">
+             mc:Ignorable="d" d:DesignHeight="30" d:DesignWidth="250">
 
     <UserControl.DataContext>
         <dnd:AbilityScore/>

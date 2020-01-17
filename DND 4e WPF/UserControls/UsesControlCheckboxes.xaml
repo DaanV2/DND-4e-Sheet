@@ -4,12 +4,10 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
-             xmlns:Converters="clr-namespace:DaanV2.DND.Converters" 
-    xmlns:DND="clr-namespace:DaanV2.DND;assembly=Data" 
-    x:Name="userControl"
-             x:Class="DaanV2.DND.UserControls.UsesControl"
-             mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800" SizeChanged="userControl_SizeChanged" >
-    
+             xmlns:DND="clr-namespace:DaanV2.DND;assembly=Data" xmlns:Converters="clr-namespace:DaanV2.DND.Converters" 
+             x:Name="userControl" x:Class="DaanV2.DND.UserControls.UsesControlCheckboxes"
+             mc:Ignorable="d" d:DesignHeight="100" d:DesignWidth="100" 
+             DataContextChanged="userControl_DataContextChanged">
     <UserControl.Resources>
         <Converters:NullToVisiblityConverter x:Key="NullToVisiblityConverter"/>
     </UserControl.Resources>
@@ -19,9 +17,5 @@
     <UserControl.DataContext>
         <DND:Uses/>
     </UserControl.DataContext>
-
-    <StackPanel x:Name="userControl">
-        <local:UsesControlCounter DataContext="{Binding DataContext, ElementName=userControl}" x:Name="userControl"/>
-        <local:UsesControlCheckboxes DataContext="{Binding DataContext, ElementName=userControl}" x:Name="userControl"/>
-    </StackPanel>
+    <StackPanel Orientation="Horizontal" x:Name="userControl" />
 </UserControl>

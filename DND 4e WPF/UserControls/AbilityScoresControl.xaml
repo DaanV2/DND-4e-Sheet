@@ -5,7 +5,8 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
              xmlns:DND="clr-namespace:DaanV2.DND;assembly=Data" 
-             x:Name="userControl" x:Class="DaanV2.DND.UserControls.AbilityScoresControl"
+             x:Name="userControl" 
+             x:Class="DaanV2.DND.UserControls.AbilityScoresControl"
              mc:Ignorable="d" d:DesignHeight="300" d:DesignWidth="400">
     <Grid>
         <Grid.ColumnDefinitions>
@@ -14,7 +15,7 @@
             <ColumnDefinition Width="70"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="25"/>
+            <RowDefinition Height="40"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
 
@@ -24,12 +25,18 @@
         <Label Content="Modifier" Grid.Row="0" Grid.Column="2" HorizontalAlignment="Left" VerticalAlignment="Center"/>
 
         <ItemsControl Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3">
-            <local:AbilityScoreControl DataContext="{Binding DataContext.Strength, ElementName=userControl}" Title="Strength"/>
-            <local:AbilityScoreControl DataContext="{Binding DataContext.Constitution, ElementName=userControl}" Title="Constitution"/>
-            <local:AbilityScoreControl DataContext="{Binding DataContext.Dexterity, ElementName=userControl}" Title="Dexterity"/>
-            <local:AbilityScoreControl DataContext="{Binding DataContext.Intelligence, ElementName=userControl}" Title="Intelligence"/>
-            <local:AbilityScoreControl DataContext="{Binding DataContext.Strength, ElementName=userControl}" Title="Strength"/>
-            <local:AbilityScoreControl DataContext="{Binding DataContext.Wisdom, ElementName=userControl}" Title="Wisdom"/>
+            <local:AbilityScoreControl DataContext="{Binding DataContext.Strength, ElementName=userControl}" Title="Strength"
+                Height="30"/>
+            <local:AbilityScoreControl DataContext="{Binding DataContext.Constitution, ElementName=userControl}" Title="Constitution"
+                Height="30"/>
+            <local:AbilityScoreControl DataContext="{Binding DataContext.Dexterity, ElementName=userControl}" Title="Dexterity"
+                Height="30"/>
+            <local:AbilityScoreControl DataContext="{Binding DataContext.Intelligence, ElementName=userControl}" Title="Intelligence"
+                Height="30"/>
+            <local:AbilityScoreControl DataContext="{Binding DataContext.Strength, ElementName=userControl}" Title="Strength"
+                Height="30"/>
+            <local:AbilityScoreControl DataContext="{Binding DataContext.Wisdom, ElementName=userControl}" Title="Wisdom"
+                Height="30"/>
         </ItemsControl>
     </Grid>
 </UserControl>

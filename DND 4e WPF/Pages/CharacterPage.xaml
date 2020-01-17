@@ -6,23 +6,18 @@
       xmlns:local="clr-namespace:DaanV2.DND.Pages"
       xmlns:usercontrols="clr-namespace:DaanV2.DND.UserControls"
       xmlns:DND="clr-namespace:DaanV2.DND;assembly=Data" x:Name="page" x:Class="DaanV2.DND.Pages.CharacterPage"
-      mc:Ignorable="d" Title="CharacterPage" Height="536.25" Width="762.5">
+      mc:Ignorable="d" Title="CharacterPage" d:DesignHeight="536.25" d:DesignWidth="762.5">
     <Page.DataContext>
         <DND:CharacterSheet/>
     </Page.DataContext>
-    <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
 
-        <WrapPanel HorizontalAlignment="Left" VerticalAlignment="Top" Grid.Row="1">
-            <Border BorderThickness="1" BorderBrush="Black" Padding="5" Margin="2" CornerRadius="5">
-                <usercontrols:AbilityScoresControl DataContext="{Binding DataContext.AbilityScores, ElementName=page}"/>
-            </Border>
-            <Border BorderThickness="1" BorderBrush="Black" Padding="5" Margin="2" CornerRadius="5">
-                <usercontrols:SkillsControl DataContext="{Binding DataContext.Skills, ElementName=page}"/>
-            </Border>
-        </WrapPanel>
-    </Grid>
+    <StackPanel>        
+        <usercontrols:AbilityScoresFancyControl DataContext="{Binding DataContext.AbilityScores, ElementName=page}" 
+            Height="120"/>
+        <TabControl x:Name="CharacterThings" Grid.Row="1">
+            <TabItem Header="_Powers" x:Name="CharacterPowers">
+                <usercontrols:PowerCollectionControl DataContext="{Binding DataContext.Powers, ElementName=page}"/>
+            </TabItem>
+        </TabControl>
+    </StackPanel>
 </Page>

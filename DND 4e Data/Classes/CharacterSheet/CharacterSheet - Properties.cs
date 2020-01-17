@@ -20,5 +20,11 @@ namespace DaanV2.DND {
         /// </summary>
         [DataMember]
         public List<SkillScore> Skills { get; set; }
+        
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public List<Power> Powers { get; set; }
     }
 }
