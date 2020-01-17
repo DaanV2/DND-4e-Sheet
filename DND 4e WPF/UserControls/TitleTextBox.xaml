@@ -5,7 +5,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
              xmlns:Converters="clr-namespace:DaanV2.DND.Converters" 
-    x:Name="userControl" x:Class="DaanV2.DND.UserControls.TitleTextBox"
+             x:Name="userControl" x:Class="DaanV2.DND.UserControls.TitleTextBox"
              mc:Ignorable="d" d:DesignHeight="40" d:DesignWidth="100">
     <UserControl.Resources>
         <Converters:StringCheckToVisiblityConverter x:Key="StringCheckToVisiblityConverter"/>
@@ -16,8 +16,8 @@
 
     <StackPanel>
         <StackPanel Orientation="Horizontal">
-            <Label x:Name="userControl" Content="{Binding TitleText, ElementName=userControl}"/>
-            <TextBlock x:Name="userControl" Text="{Binding TextValue, ElementName=userControl}"/>
+            <Label x:Name="LabelTitle" Content="{Binding TitleText, ElementName=userControl}"/>
+            <TextBlock x:Name="TextBoxText" Text="{Binding TextValue, ElementName=userControl}"/>
         </StackPanel>
         <Separator/>
     </StackPanel>

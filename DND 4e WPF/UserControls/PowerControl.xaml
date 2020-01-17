@@ -19,7 +19,7 @@
         <DND:Power/>
     </UserControl.DataContext>
 
-    <Border x:Name="userControl" BorderThickness="1" BorderBrush="{Binding Converter={StaticResource PowerToBrush}, Mode=OneWay}" 
+    <Border x:Name="borderMain" BorderThickness="1" BorderBrush="{Binding Converter={StaticResource PowerToBrush}, Mode=OneWay}" 
             CornerRadius="1" >
 
         <StackPanel>

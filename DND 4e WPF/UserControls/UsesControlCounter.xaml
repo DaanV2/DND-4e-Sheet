@@ -13,8 +13,8 @@
     </UserControl.DataContext>
 
     <StackPanel Orientation="Horizontal" VerticalAlignment="Center">
-        <Button Content="+" x:Name="userControl" Click="Add_Click"/>
-        <Button Content="-" x:Name="userControl" Click="Sub_Click"/>
+        <Button Content="+" x:Name="ButtonAdd" Click="Add_Click"/>
+        <Button Content="-" x:Name="ButtonSub" Click="Sub_Click"/>
         <Label Content="{Binding Used, Mode=TwoWay}"/>
         <Label Content="/"/>
         <Label Content="{Binding Max, Mode=TwoWay}"/>

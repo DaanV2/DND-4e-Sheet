@@ -21,7 +21,7 @@
     </UserControl.DataContext>
 
     <StackPanel x:Name="userControl">
-        <local:UsesControlCounter DataContext="{Binding DataContext, ElementName=userControl}" x:Name="userControl"/>
-        <local:UsesControlCheckboxes DataContext="{Binding DataContext, ElementName=userControl}" x:Name="userControl"/>
+        <local:UsesControlCounter DataContext="{Binding DataContext, ElementName=userControl}" x:Name="UsesCounter"/>
+        <local:UsesControlCheckboxes DataContext="{Binding DataContext, ElementName=userControl}" x:Name="UsesCheckBoxes"/>
     </StackPanel>
 </UserControl>

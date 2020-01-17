@@ -17,5 +17,5 @@
     <UserControl.DataContext>
         <DND:Uses/>
     </UserControl.DataContext>
-    <StackPanel Orientation="Horizontal" x:Name="userControl" />
+    <StackPanel Orientation="Horizontal" x:Name="MainGrid" />
 </UserControl>

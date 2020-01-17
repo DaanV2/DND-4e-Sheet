@@ -21,7 +21,7 @@
         </ItemsControl.ItemTemplate>
         <ItemsControl.ItemsPanel>
             <ItemsPanelTemplate>
-                <WrapPanel IsItemsHost="true" x:Name="userControl"/>
+                <WrapPanel IsItemsHost="true" x:Name="MainGrid"/>
             </ItemsPanelTemplate>
         </ItemsControl.ItemsPanel>
     </ItemsControl>

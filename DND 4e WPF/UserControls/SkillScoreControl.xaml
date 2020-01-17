@@ -7,15 +7,15 @@
              mc:Ignorable="d" d:DesignHeight="50" d:DesignWidth="350">
         
     <DockPanel>
-        <TextBox x:Name="userControl"  DockPanel.Dock="Left" Width="40" TextAlignment="Center"
+        <TextBox x:Name="TextBoxBonus" DockPanel.Dock="Left" Width="40" TextAlignment="Center"
             Text="{Binding DataContext.Bonus, ElementName=userControl, FallbackValue=0, Mode=OneWay}" MaxLines="1"/>
-        <CheckBox x:Name="userControl" DockPanel.Dock="Right"
+        <CheckBox x:Name="CheckBoxTrained" DockPanel.Dock="Right"
             IsChecked="{Binding DataContext.Trained, ElementName=userControl, FallbackValue=false, Mode=TwoWay}" VerticalAlignment="Center"/>
-        <TextBox x:Name="userControl" DockPanel.Dock="Right" Width="40" TextAlignment="Center"
+        <TextBox x:Name="TextBoxArmorPenalty" DockPanel.Dock="Right" Width="40" TextAlignment="Center"
             Text="{Binding DataContext.ArmorPenalty, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
-        <TextBox x:Name="userControl" DockPanel.Dock="Right" Width="40" TextAlignment="Center"
+        <TextBox x:Name="TextBoxMisc" DockPanel.Dock="Right" Width="40" TextAlignment="Center"
             Text="{Binding DataContext.Misc, ElementName=userControl, FallbackValue=0, Mode=TwoWay}" MaxLines="1"/>
-        <Label x:Name="userControl" VerticalAlignment="Center"
+        <Label x:Name="LabelName" VerticalAlignment="Center"
             Content="{Binding DataContext.Name, ElementName=userControl, FallbackValue=Skill, Mode=TwoWay}"/>
     </DockPanel>
 </UserControl>
