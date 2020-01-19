@@ -1,12 +1,14 @@
-﻿<UserControl
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
-             xmlns:Converters="clr-namespace:DaanV2.DND.Converters" 
-             x:Name="userControl" x:Class="DaanV2.DND.UserControls.TitleTextBox"
-             mc:Ignorable="d" d:DesignHeight="40" d:DesignWidth="250">
+             xmlns:Converters="clr-namespace:DaanV2.DND.Converters"
+             x:Name="userControl"
+             x:Class="DaanV2.DND.UserControls.TitleTextBox"
+             mc:Ignorable="d"
+             d:DesignHeight="40"
+             d:DesignWidth="250" >
     <UserControl.Resources>
         <ResourceDictionary>
             <Converters:StringCheckToVisiblityConverter x:Key="StringCheckToVisiblityConverter" />
@@ -20,18 +22,19 @@
     <UserControl.Visibility>
         <Binding Converter="{StaticResource StringCheckToVisiblityConverter}" ElementName="userControl" Path="TextValue"/>
     </UserControl.Visibility>
+    
     <DockPanel>
         <TextBox x:Name="LabelTitle"
                  Text="{Binding TitleText, ElementName=userControl, Mode=TwoWay}"
                  DockPanel.Dock="Left"
-                 VerticalAlignment="Center"
+                 VerticalAlignment="Top"
                  FontWeight="Bold"
                  Padding="0"
                  Margin="0"
                  Style="{StaticResource ResourceKey=Empty}" />
         <TextBox x:Name="TextBoxText"
                  Text="{Binding TextValue, ElementName=userControl, Mode=TwoWay}"
-                 VerticalAlignment="Center"
+                 VerticalAlignment="Top"
                  HorizontalAlignment="Right"
                  Padding="0"
                  Margin="0"

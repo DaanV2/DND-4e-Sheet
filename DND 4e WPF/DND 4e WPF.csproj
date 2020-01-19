@@ -106,11 +106,17 @@
     <Compile Include="UserControls\PowerControl.xaml.cs">
       <DependentUpon>PowerControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\Proficiencies.xaml.cs">
+      <DependentUpon>Proficiencies.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\SkillsControl.xaml.cs">
       <DependentUpon>SkillsControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\SkillScoreControl.xaml.cs">
       <DependentUpon>SkillScoreControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\StringCollection.xaml.cs">
+      <DependentUpon>StringCollection.xaml</DependentUpon>
     </Compile>
     <Compile Include="UserControls\TitleTextBox.xaml.cs">
       <DependentUpon>TitleTextBox.xaml</DependentUpon>
@@ -188,11 +194,19 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="UserControls\Proficiencies.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\SkillsControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\SkillScoreControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\StringCollection.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

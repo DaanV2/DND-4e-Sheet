@@ -10,6 +10,7 @@
 
     <ScrollViewer VerticalScrollBarVisibility="Auto" HorizontalScrollBarVisibility="Disabled"> 
         <StackPanel Orientation="Vertical">
+            <!--Feats-->
             <Label Content="Feats"
                    Background="LightGray"
                    VerticalAlignment="Top" />
@@ -18,11 +19,13 @@
                                     VerticalAlignment="Top" />
             <Label Content="Class / Path / Destiny Feats"
                    Background="LightGray" />
+            <!--Class Feats-->
             <local:FeatsListControl DataContext="{Binding ClassFeats}"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Top" />
             <Label Content="Race Features"
                    Background="LightGray" />
+            <!--Racial Feat-->
             <local:FeatsListControl DataContext="{Binding RacialFeats}"
                                     HorizontalAlignment="Left"
                                     VerticalAlignment="Top" />

@@ -48,6 +48,12 @@
                     Binding RelativeSource={RelativeSource AncestorType=Page, Mode=FindAncestor}, 
                     Path=DataContext.Feats}" />
             </TabItem>
+            <TabItem Header="_Proficiencies"
+                     x:Name="CharacterProficiencies">
+                <usercontrols:Proficiencies DataContext="{
+                    Binding RelativeSource={RelativeSource AncestorType=Page, Mode=FindAncestor}, 
+                    Path=DataContext.Proficiencies}" />
+            </TabItem>
         </TabControl>
     </DockPanel>
 </Page>

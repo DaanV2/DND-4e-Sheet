@@ -19,19 +19,20 @@
             <Converters:StringCheckToVisiblityConverter x:Key="StringCheckToVisiblityConverter" />
         </ResourceDictionary>
     </UserControl.Resources>
+
     <UserControl.Visibility>
-        <Binding Converter="{StaticResource StringCheckToVisiblityConverter}"
-                 ElementName="TextboxText"
-                 Path="Text" />
+        <Binding Converter="{StaticResource StringCheckToVisiblityConverter}" ElementName="userControl" Path="TextValue" />
     </UserControl.Visibility>
 
-    <StackPanel>
-        <TextBox x:Name="TextboxText"
+    <DockPanel>
+        <TextBox x:Name="TextboxText" 
+                 DockPanel.Dock="Top"
                  Text="{Binding TextValue, ElementName=userControl, Mode=TwoWay}"
                  Style="{StaticResource ResourceKey=Empty}" />
         <TextBox x:Name="TextboxTitle"
+                 DockPanel.Dock="Top"
                  Text="{Binding TitleText, ElementName=userControl, Mode=TwoWay}"
                  Background="{Binding TitleBackground, ElementName=userControl}"
                  Style="{StaticResource ResourceKey=Empty}" />
-    </StackPanel>
+    </DockPanel>
 </UserControl>

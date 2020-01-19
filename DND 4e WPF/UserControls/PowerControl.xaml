@@ -86,8 +86,7 @@
                                             TitleText="Attack"
                                             TextValue="{Binding Info.AttackBonus}"
                                             Background="White"
-                                            x:Name="TextBoxAttackBonus" 
-                                            Visibility="{Binding DataContext}"/>
+                                            x:Name="TextBoxAttackBonus"/>
 
                 <Label Content="vs" 
                        VerticalAlignment="Center"
