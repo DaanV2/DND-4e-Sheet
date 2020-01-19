@@ -19,12 +19,37 @@ namespace DaanV2.DND {
         /// 
         /// </summary>
         [DataMember]
-        public List<SkillScore> Skills { get; set; }
-        
+        public Defenses Defenses { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public FeatCollection Feats { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public Proficiencies Proficiencies { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public Hitpoints Hitpoints { get; set; }
+
         /// <summary>
         /// 
         /// </summary>
         [DataMember]
         public List<Power> Powers { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public List<SkillScore> Skills { get; set; }
+
     }
 }

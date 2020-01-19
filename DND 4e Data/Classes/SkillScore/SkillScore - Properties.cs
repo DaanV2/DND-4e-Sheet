@@ -6,6 +6,7 @@ namespace DaanV2.DND {
         /// <summary>
         /// 
         /// </summary>
+        [DataMember]
         public Int32 Bonus { get; set; }
 
         /// <summary>

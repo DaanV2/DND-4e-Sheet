@@ -8,7 +8,7 @@ namespace DaanV2.DND.UserControls {
     /// </summary>
     public partial class UsesControl : UserControl {
         public UsesControl() {
-            Console.WriteLine($"{nameof(UsesControl)} Loaded");
+            
             this.InitializeComponent();
         }
 

@@ -11,50 +11,7 @@ namespace DaanV2.DND {
         /// 
         /// </summary>
         [DataMember]
-        public Boolean AtWill { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public Boolean Encounter { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public Boolean Daily { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public String Range { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public String AttackBonus { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public String Defense { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public String Title { get; set; }
-
-        /// <summary>
-        /// 
-        /// </summary>
-        [DataMember]
-        public String[] Keywords { get; set; }
-
+        public String AdditionalEffects { get; set; }
 
         /// <summary>
         /// 
@@ -66,7 +23,31 @@ namespace DaanV2.DND {
         /// 
         /// </summary>
         [DataMember]
-        public String Target { get; set; }
+        public String AttackStat { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public Boolean AtWill { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public String AttackBonus { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public String DefenseStat { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public Boolean Daily { get; set; }
 
         /// <summary>
         /// 
@@ -78,6 +59,31 @@ namespace DaanV2.DND {
         /// 
         /// </summary>
         [DataMember]
-        public String AdditionalEffects { get; set; }
+        public Boolean Encounter { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public String[] Keywords { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public String Range { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public String Target { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public String Title { get; set; }
+
     }
 }

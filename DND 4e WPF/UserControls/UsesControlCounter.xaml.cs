@@ -11,7 +11,7 @@ namespace DaanV2.DND.UserControls {
         public Uses ViewModel { get => (Uses)this.DataContext; set => this.DataContext = value; }
 
         public UsesControlCounter() {
-            Console.WriteLine($"{nameof(UsesControlCounter)} Loaded");
+            
             this.InitializeComponent();
         }
 

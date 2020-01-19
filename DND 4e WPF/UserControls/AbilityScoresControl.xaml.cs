@@ -7,7 +7,7 @@ namespace DaanV2.DND.UserControls {
     /// </summary>
     public partial class AbilityScoresControl : UserControl {
         public AbilityScoresControl() {
-            Console.WriteLine($"{nameof(AbilityScoresControl)} Loaded");
+            
             this.InitializeComponent();
         }
     }

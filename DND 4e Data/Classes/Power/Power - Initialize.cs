@@ -8,7 +8,7 @@ namespace DaanV2.DND {
     public partial class Power {
         /// <summary>Creates a new instance of <see cref="Power"/></summary>
         public Power() {
-            this.Attributes = new List<PowerAttribute>();
+            this.Attributes = new List<SimpleInfo>();
             this.Info = new PowerInformation();
             this.Uses = new Uses();
         }

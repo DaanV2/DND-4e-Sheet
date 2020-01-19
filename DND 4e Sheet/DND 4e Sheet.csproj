@@ -167,6 +167,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\DND 4e Converter\DND 4e Converter.csproj">
+      <Project>{c1173fb8-bfc2-478b-bae2-c66807ece122}</Project>
+      <Name>DND 4e Converter</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DND 4e Data\DND 4e Data.csproj">
       <Project>{a3daf79a-5d87-4672-b92b-394fdbf41152}</Project>
       <Name>DND 4e Data</Name>

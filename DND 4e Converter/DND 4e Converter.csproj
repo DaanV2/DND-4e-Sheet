@@ -1,0 +1,69 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{C1173FB8-BFC2-478B-BAE2-C66807ECE122}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>DaanV2.DND.Converter</RootNamespace>
+    <AssemblyName>DND 4e Converter</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="PresentationFramework" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static Classes\ElementConverter\ElementConverter - Power.cs" />
+    <Compile Include="Static Classes\ElementConverter\ElementConverter - Proficiency.cs" />
+    <Compile Include="Static Classes\ElementConverter\ElementConverter - Feat.cs" />
+    <Compile Include="Static Classes\ElementConverter\ElementConverter - SkillScore.cs" />
+    <Compile Include="Static Classes\ElementConverter\ElementConverter - DefenseScore.cs" />
+    <Compile Include="Static Classes\SheetConverter\SheetConverter - CharacterSheet - RulesElementTally.cs" />
+    <Compile Include="Static Classes\SheetConverter\SheetConverter - CharacterSheet - PowerStats.cs" />
+    <Compile Include="Static Classes\SheetConverter\SheetConverter - CharacterSheet - StatBlock.cs" />
+    <Compile Include="Static Classes\SheetConverter\SheetConverter - CharacterSheet - AbilityScores.cs" />
+    <Compile Include="Static Classes\SheetConverter\SheetConverter - CharacterSheet - Details.cs" />
+    <Compile Include="Static Classes\SheetConverter\SheetConverter - CharacterSheet.cs" />
+    <Compile Include="Static Classes\SheetConverter\SheetConverter - Convert - D20Character.cs" />
+    <Compile Include="Static Classes\SheetConverter\SheetConverter - Convert.cs" />
+    <Compile Include="Static Classes\XmlNodeExtension\XmlNodeExtension - ToString.cs" />
+    <Compile Include="Static Classes\XmlNodeExtension\XmlNodeExtension - ToInt.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DND 4e Data\DND 4e Data.csproj">
+      <Project>{a3daf79a-5d87-4672-b92b-394fdbf41152}</Project>
+      <Name>DND 4e Data</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

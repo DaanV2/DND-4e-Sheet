@@ -10,7 +10,7 @@ namespace DaanV2.DND {
         /// <summary>
         /// 
         /// </summary>
-        [DataMember]
+        [IgnoreDataMember]
         public Int32 Score { get {
                 Int32 Out = this._Detaits == null ? 10 : this._Detaits.HalfLevel + 10;
                 Out += this.Armor + this.Class + this.Feat + this.Enhanced + this.Misc;

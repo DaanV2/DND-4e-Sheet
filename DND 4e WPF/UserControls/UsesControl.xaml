@@ -16,9 +16,6 @@
     <UserControl.Visibility>
         <Binding Converter="{StaticResource NullToVisiblityConverter}" ElementName="userControl" Path="DataContext"/>
     </UserControl.Visibility>
-    <UserControl.DataContext>
-        <DND:Uses/>
-    </UserControl.DataContext>
 
     <StackPanel x:Name="MainGrid">
         <local:UsesControlCounter DataContext="{Binding DataContext, ElementName=userControl}" x:Name="UsesCounter"/>

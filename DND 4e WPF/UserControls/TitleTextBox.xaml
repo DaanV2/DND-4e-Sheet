@@ -6,19 +6,36 @@
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
              xmlns:Converters="clr-namespace:DaanV2.DND.Converters" 
              x:Name="userControl" x:Class="DaanV2.DND.UserControls.TitleTextBox"
-             mc:Ignorable="d" d:DesignHeight="40" d:DesignWidth="100">
+             mc:Ignorable="d" d:DesignHeight="40" d:DesignWidth="250">
     <UserControl.Resources>
-        <Converters:StringCheckToVisiblityConverter x:Key="StringCheckToVisiblityConverter"/>
+        <ResourceDictionary>
+            <Converters:StringCheckToVisiblityConverter x:Key="StringCheckToVisiblityConverter" />
+            
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Data-Wpf;component/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
+    
     <UserControl.Visibility>
         <Binding Converter="{StaticResource StringCheckToVisiblityConverter}" ElementName="userControl" Path="TextValue"/>
     </UserControl.Visibility>
-
-    <StackPanel>
-        <StackPanel Orientation="Horizontal">
-            <Label x:Name="LabelTitle" Content="{Binding TitleText, ElementName=userControl}"/>
-            <TextBlock x:Name="TextBoxText" Text="{Binding TextValue, ElementName=userControl}"/>
-        </StackPanel>
-        <Separator/>
-    </StackPanel>
+    <DockPanel>
+        <TextBox x:Name="LabelTitle"
+                 Text="{Binding TitleText, ElementName=userControl, Mode=TwoWay}"
+                 DockPanel.Dock="Left"
+                 VerticalAlignment="Center"
+                 FontWeight="Bold"
+                 Padding="0"
+                 Margin="0"
+                 Style="{StaticResource ResourceKey=Empty}" />
+        <TextBox x:Name="TextBoxText"
+                 Text="{Binding TextValue, ElementName=userControl, Mode=TwoWay}"
+                 VerticalAlignment="Center"
+                 HorizontalAlignment="Right"
+                 Padding="0"
+                 Margin="0"
+                 DockPanel.Dock="Right"
+                 Style="{StaticResource ResourceKey=Empty}" />
+    </DockPanel>
 </UserControl>

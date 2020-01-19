@@ -8,7 +8,7 @@ namespace DaanV2.DND {
         /// 
         /// </summary>
         [DataMember]
-        public List<PowerAttribute> Attributes { get; set; }
+        public List<SimpleInfo> Attributes { get; set; }
 
         /// <summary>
         /// 

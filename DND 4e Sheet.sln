@@ -9,6 +9,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DND 4e Data", "DND 4e Data\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DND 4e WPF", "DND 4e WPF\DND 4e WPF.csproj", "{2D3EA50F-D7B5-4768-AC89-E51A5F9513A1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DND 4e Converter", "DND 4e Converter\DND 4e Converter.csproj", "{C1173FB8-BFC2-478B-BAE2-C66807ECE122}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Debugger", "Debugger\Debugger.csproj", "{455A5C6E-D653-4D39-9C70-B6D690045EBA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{2D3EA50F-D7B5-4768-AC89-E51A5F9513A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2D3EA50F-D7B5-4768-AC89-E51A5F9513A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2D3EA50F-D7B5-4768-AC89-E51A5F9513A1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C1173FB8-BFC2-478B-BAE2-C66807ECE122}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C1173FB8-BFC2-478B-BAE2-C66807ECE122}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C1173FB8-BFC2-478B-BAE2-C66807ECE122}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C1173FB8-BFC2-478B-BAE2-C66807ECE122}.Release|Any CPU.Build.0 = Release|Any CPU
+		{455A5C6E-D653-4D39-9C70-B6D690045EBA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{455A5C6E-D653-4D39-9C70-B6D690045EBA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{455A5C6E-D653-4D39-9C70-B6D690045EBA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{455A5C6E-D653-4D39-9C70-B6D690045EBA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

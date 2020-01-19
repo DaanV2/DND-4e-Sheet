@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2.DND {
-    public partial class Feat {
-        //DOLATER add variables to class Feat
+    public partial class SimpleInfo {
+        //DOLATER add variables to class SimpleInfo
     }
 }

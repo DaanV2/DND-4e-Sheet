@@ -91,6 +91,15 @@
     <Compile Include="UserControls\AbilityScoresFancyControl.xaml.cs">
       <DependentUpon>AbilityScoresFancyControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControls\CharacterSummary.xaml.cs">
+      <DependentUpon>CharacterSummary.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FeatsCollectionControl.xaml.cs">
+      <DependentUpon>FeatsCollectionControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\FeatsListControl.xaml.cs">
+      <DependentUpon>FeatsListControl.xaml</DependentUpon>
+    </Compile>
     <Compile Include="UserControls\PowerCollectionControl.xaml.cs">
       <DependentUpon>PowerCollectionControl.xaml</DependentUpon>
     </Compile>
@@ -139,6 +148,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles\Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="UserControls\AbilityScoreControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -152,6 +165,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="UserControls\AbilityScoresFancyControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\CharacterSummary.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\FeatsCollectionControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="UserControls\FeatsListControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

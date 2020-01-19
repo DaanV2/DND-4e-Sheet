@@ -1,18 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
-using Microsoft.Win32;
 
 namespace DaanV2.DND.Pages {
     /// <summary>
@@ -20,11 +9,24 @@ namespace DaanV2.DND.Pages {
     /// </summary>
     public partial class StartPage : Page {
         public StartPage() {
-            InitializeComponent();
+            this.InitializeComponent();
         }
 
         private void ButtonNewCharacter_Click(Object sender, RoutedEventArgs e) {
             CharacterController.NewCharacter();
+        }
+
+        private void ButtonImport_Click(Object sender, RoutedEventArgs e) {
+            List<CharacterSheet> Items = Converter.SheetConverter.Convert();
+
+            if (Items == null) {
+                return;
+            }
+
+            foreach (CharacterSheet C in Items) {
+                Storage.Set(C);
+                CharacterController.LoadCharacter(C);
+            }
         }
     }
 }

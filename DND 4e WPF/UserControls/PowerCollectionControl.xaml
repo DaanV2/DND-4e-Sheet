@@ -9,16 +9,23 @@
              x:Class="DaanV2.DND.UserControls.PowerCollectionControl"
              mc:Ignorable="d" d:DesignHeight="450" d:DesignWidth="800">
 
-    <ItemsControl x:Name="Powers" ItemsSource="{Binding DataContext}" >
-        <ItemsControl.ItemTemplate>
-            <DataTemplate>
-                <local:PowerControl DataContext="{Binding}" />
-            </DataTemplate>
-        </ItemsControl.ItemTemplate>
-        <ItemsControl.ItemsPanel>
-            <ItemsPanelTemplate>
-                <WrapPanel IsItemsHost="true" x:Name="MainGrid" DataContext="{Binding DataContext}"/>
-            </ItemsPanelTemplate>
-        </ItemsControl.ItemsPanel>
-    </ItemsControl>
+    <ScrollViewer HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto" 
+                    x:Name="MyScrollViewer">
+        
+        <ItemsControl x:Name="Powers" ItemsSource="{
+            Binding RelativeSource={RelativeSource AncestorType=UserControl, Mode=FindAncestor}, 
+            Path=DataContext}">
+            <ItemsControl.ItemTemplate>
+                <DataTemplate>
+                    <local:PowerControl DataContext="{Binding}" Padding="5" Margin="2" 
+                                        HorizontalAlignment="Left" VerticalAlignment="Top" />
+                </DataTemplate>
+            </ItemsControl.ItemTemplate>
+            <ItemsControl.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel x:Name="MainGrid"/>
+                </ItemsPanelTemplate>
+            </ItemsControl.ItemsPanel>
+        </ItemsControl>
+    </ScrollViewer>
 </UserControl>

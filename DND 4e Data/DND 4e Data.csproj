@@ -31,11 +31,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="ConfigHandling.Net, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Config-Handling.Net.1.0.4\lib\net48\ConfigHandling.Net.dll</HintPath>
+    <Reference Include="ConfigHandling.Net, Version=1.0.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Config-Handling.Net.1.0.6\lib\net48\ConfigHandling.Net.dll</HintPath>
     </Reference>
-    <Reference Include="DaanV2.Essentials.Net, Version=1.0.2.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\DaanV2.Essentials.Net.1.0.2\lib\net48\DaanV2.Essentials.Net.dll</HintPath>
+    <Reference Include="DaanV2.Essentials.Net, Version=1.0.4.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\DaanV2.Essentials.Net.1.0.4\lib\net48\DaanV2.Essentials.Net.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -66,21 +66,26 @@
     <Compile Include="Classes\Details\Details - Initialize.cs" />
     <Compile Include="Classes\Details\Details - Properties.cs" />
     <Compile Include="Classes\Details\Details - Variables.cs" />
-    <Compile Include="Classes\Feat\Feat - Initialize.cs" />
-    <Compile Include="Classes\Feat\Feat - Properties.cs" />
-    <Compile Include="Classes\Feat\Feat - Variables.cs" />
+    <Compile Include="Classes\FeatCollection\FeatCollection - Initialize.cs" />
+    <Compile Include="Classes\FeatCollection\FeatCollection - Properties.cs" />
+    <Compile Include="Classes\FeatCollection\FeatCollection - Variables.cs" />
     <Compile Include="Classes\Hitpoints\Hitpoints - Initialize.cs" />
     <Compile Include="Classes\Hitpoints\Hitpoints - Properties.cs" />
     <Compile Include="Classes\Hitpoints\Hitpoints - Variables.cs" />
-    <Compile Include="Classes\Power Attribute\Power Attribute - Initialize.cs" />
-    <Compile Include="Classes\Power Attribute\Power Attribute - Properties.cs" />
-    <Compile Include="Classes\Power Attribute\Power Attribute - Variables.cs" />
     <Compile Include="Classes\Power Information\Power Information - Initialize.cs" />
     <Compile Include="Classes\Power Information\Power Information - Properties.cs" />
     <Compile Include="Classes\Power Information\Power Information - Variables.cs" />
     <Compile Include="Classes\Power\Power - Initialize.cs" />
     <Compile Include="Classes\Power\Power - Properties.cs" />
     <Compile Include="Classes\Power\Power - Variables.cs" />
+    <Compile Include="Classes\Proficiencies\Proficiencies - Initialize.cs" />
+    <Compile Include="Classes\Proficiencies\Proficiencies - Properties.cs" />
+    <Compile Include="Classes\Proficiencies\Proficiencies - Variables.cs" />
+    <Compile Include="Classes\SimpleInfo\SimpleInfo - Initialize.cs" />
+    <Compile Include="Classes\SimpleInfo\SimpleInfo - Properties.cs" />
+    <Compile Include="Classes\SimpleInfo\SimpleInfo - Casting.cs" />
+    <Compile Include="Classes\SimpleInfo\SimpleInfo - Overrides.cs" />
+    <Compile Include="Classes\SimpleInfo\SimpleInfo - Variables.cs" />
     <Compile Include="Classes\SkillScore\SkillScore - Initialize.cs" />
     <Compile Include="Classes\SkillScore\SkillScore - Properties.cs" />
     <Compile Include="Classes\SkillScore\SkillScore - Variables.cs" />
@@ -94,6 +99,7 @@
     <Compile Include="Classes\Uses\Uses - INotifyPropertyChanged.cs" />
     <Compile Include="Classes\Uses\Uses - Variables.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Static Classes\Extension\Extension - Skill.cs" />
     <Compile Include="Static Classes\Storage\Storage - Initialize.cs" />
     <Compile Include="Static Classes\Storage\Storage - Properties.cs" />
     <Compile Include="Static Classes\Storage\Storage - Get Set.cs" />

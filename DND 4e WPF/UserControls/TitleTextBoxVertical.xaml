@@ -1,15 +1,37 @@
-﻿<UserControl x:Name="userControl" x:Class="DaanV2.DND.UserControls.TitleTextBoxVertical"
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
-             mc:Ignorable="d" d:DesignHeight="100" d:DesignWidth="200"
+             xmlns:Converters="clr-namespace:DaanV2.DND.Converters"
+             x:Name="userControl"
+             x:Class="DaanV2.DND.UserControls.TitleTextBoxVertical"
+             mc:Ignorable="d"
+             d:DesignHeight="100"
+             d:DesignWidth="200"
              BorderBrush="{Binding TitleBackground, ElementName=userControl}"
              BorderThickness="1">
+    <UserControl.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Data-Wpf;component/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+            <Converters:StringCheckToVisiblityConverter x:Key="StringCheckToVisiblityConverter" />
+        </ResourceDictionary>
+    </UserControl.Resources>
+    <UserControl.Visibility>
+        <Binding Converter="{StaticResource StringCheckToVisiblityConverter}"
+                 ElementName="TextboxText"
+                 Path="Text" />
+    </UserControl.Visibility>
+
     <StackPanel>
-        <Label Content="{Binding TextValue, ElementName=userControl}" />
-        <Label Content="{Binding TitleText, ElementName=userControl}" 
-               Background="{Binding TitleBackground, ElementName=userControl}"  />
+        <TextBox x:Name="TextboxText"
+                 Text="{Binding TextValue, ElementName=userControl, Mode=TwoWay}"
+                 Style="{StaticResource ResourceKey=Empty}" />
+        <TextBox x:Name="TextboxTitle"
+                 Text="{Binding TitleText, ElementName=userControl, Mode=TwoWay}"
+                 Background="{Binding TitleBackground, ElementName=userControl}"
+                 Style="{StaticResource ResourceKey=Empty}" />
     </StackPanel>
 </UserControl>

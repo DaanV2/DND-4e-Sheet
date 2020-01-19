@@ -1,4 +1,6 @@
-﻿using System.Windows.Controls;
+﻿using System;
+using System.Windows;
+using System.Windows.Controls;
 
 namespace DaanV2.DND.Pages {
     /// <summary>
@@ -6,8 +8,13 @@ namespace DaanV2.DND.Pages {
     /// </summary>
     public partial class CharacterPage : Page {
         public CharacterPage() {
-            this.DataContext = new CharacterSheet();
             this.InitializeComponent();
+        }
+
+        private void ButtonSave_Click(Object sender, RoutedEventArgs e) {
+            if (this.DataContext is CharacterSheet CS) {
+                Storage.Set(CS);
+            }
         }
     }
 }

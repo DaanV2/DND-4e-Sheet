@@ -9,9 +9,13 @@ namespace DaanV2.DND {
         /// <summary>Creates a new instance of <see cref="CharacterSheet"/></summary>
         public CharacterSheet() {
             this.AbilityScores = new AbilityScores();
+            this.Hitpoints = new Hitpoints();
             this.Details = new Details();
-            this.Skills = SkillScore.Create();
+            this.Defenses = new Defenses(Details);
+            this.Feats = new FeatCollection();
             this.Powers = new List<Power>();
+            this.Proficiencies = new Proficiencies();
+            this.Skills = SkillScore.Create();            
         }
     }
 }

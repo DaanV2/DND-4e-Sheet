@@ -8,7 +8,7 @@ namespace DaanV2.DND.UserControls {
     /// </summary>
     public partial class TitleTextBox : UserControl {
         public TitleTextBox() {
-            Console.WriteLine($"{nameof(TitleTextBox)} Loaded");
+            
             this.InitializeComponent();
         }
 

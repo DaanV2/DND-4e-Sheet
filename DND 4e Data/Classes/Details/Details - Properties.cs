@@ -23,5 +23,29 @@ namespace DaanV2.DND {
         /// </summary>
         [DataMember]
         public String Name { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public String Class { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public String Race { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public List<SimpleInfo> OtherInfo { get; set; }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        [DataMember]
+        public Int64 XP { get; set; }
     }
 }

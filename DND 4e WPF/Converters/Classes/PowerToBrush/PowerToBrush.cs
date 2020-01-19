@@ -6,10 +6,10 @@ using System.Windows.Media;
 namespace DaanV2.DND.Converters {
     ///DOLATER <summary>add description for class: PowerToBrush</summary>
     public partial class PowerToBrush : IValueConverter {
-        private static Brush Default = Brushes.Purple;
-        private static Brush Atwill = Brushes.Green;
-        private static Brush Encounter = Brushes.Red;
-        private static Brush Daily = Brushes.Gray;
+        private static Brush Default = Brushes.MediumPurple;
+        private static Brush Atwill = Brushes.LightGreen;
+        private static Brush Encounter = Brushes.MediumVioletRed;
+        private static Brush Daily = Brushes.LightGray;
 
         public Object Convert(Object value, Type targetType, Object parameter, CultureInfo culture) {
             if (value is Power P) {

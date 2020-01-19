@@ -10,7 +10,7 @@ namespace DaanV2.DND.UserControls {
         public Power ViewModel { get => (Power)this.DataContext; set => this.DataContext = value; }
 
         public PowerControl() {
-            Console.WriteLine($"{nameof(PowerControl)} Loaded");
+            
             this.InitializeComponent();
         }
     }

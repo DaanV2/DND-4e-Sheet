@@ -1,81 +1,136 @@
-﻿<UserControl
-             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+﻿<UserControl xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:local="clr-namespace:DaanV2.DND.UserControls"
-             xmlns:DND="clr-namespace:DaanV2.DND;assembly=Data" 
-             xmlns:Converters="clr-namespace:DaanV2.DND.Converters" 
-             x:Name="userControl" x:Class="DaanV2.DND.UserControls.PowerControl"
-             Background="{Binding BorderBrush, ElementName=border}"
-             mc:Ignorable="d" 
-             d:DesignHeight="450" d:DesignWidth="800">
-    
+             xmlns:DND="clr-namespace:DaanV2.DND;assembly=Data"
+             xmlns:Converters="clr-namespace:DaanV2.DND.Converters"
+             x:Name="userControl"
+             x:Class="DaanV2.DND.UserControls.PowerControl"
+             mc:Ignorable="d"
+             d:DesignHeight="250"
+             d:DesignWidth="250">
+
     <UserControl.Resources>
-        <Converters:PowerToBrush x:Key="PowerToBrush"/>
-        <Converters:StringArrayConverter x:Key="StringArrayConverter"/>
+        <ResourceDictionary>
+            <Converters:StringCheckToVisiblityConverter x:Key="StringCheckToVisiblityConverter" />
+            <Converters:PowerToBrush x:Key="PowerToBrush" />
+            <Converters:StringArrayConverter x:Key="StringArrayConverter" />
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="/Data-Wpf;component/Styles/Styles.xaml" />
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </UserControl.Resources>
-    <UserControl.DataContext>
-        <DND:Power/>
-    </UserControl.DataContext>
 
-    <Border x:Name="borderMain" BorderThickness="1" BorderBrush="{Binding Converter={StaticResource PowerToBrush}, Mode=OneWay}" 
-            CornerRadius="1" >
+    <Border x:Name="borderMain"
+            BorderThickness="1"
+            BorderBrush="{Binding Background, ElementName=borderMain}"
+            Background="{Binding DataContext, Converter={StaticResource PowerToBrush}, ElementName=userControl}"
+            CornerRadius="10"
+            Margin="2"
+            Padding="5">
 
-        <StackPanel>
-            <!--Header-->
-            <Label Content="{Binding Info.Title}" Background="White"/>
+        <StackPanel x:Name="MainPanel">
+            <StackPanel x:Name="HeaderPanel"
+                        Orientation="Horizontal"
+                        Background="White">
+                <StackPanel x:Name="TitlePanels">
+                    <!--Header-->
+                    <Label Content="{Binding Info.Title, Mode=TwoWay}"
+                           Background="White"
+                           x:Name="LabelTitle" />
 
-            <!--Keywords-->
-            <local:TitleTextBox TitleText="Keywords: " 
-                TextValue="{Binding Info.Keywords, Converter={StaticResource StringArrayConverter}}"  Background="White"/>
+                    <!--Keywords-->
+                    <local:TitleTextBox TitleText="Keywords: "
+                                        x:Name="TextBoxKeyWords"
+                                        TextValue="{Binding Info.Keywords, Converter={StaticResource StringArrayConverter}, Mode=TwoWay}"
+                                        Background="White" />
+                </StackPanel>
 
-            <!--Users-->
-            <local:UsesControl DataContext="{Binding Uses}" Background="White"/>
+                <!--Users-->
+                <local:UsesControl DataContext="{Binding Uses, Mode=TwoWay}"
+                                   Background="White"
+                                   x:Name="UsesControl" />
+            </StackPanel>
 
             <!--Info-->
-            <StackPanel Orientation="Horizontal">
+            <StackPanel Orientation="Horizontal"
+                        x:Name="InfoPanel">
                 <!--Action Type-->
-                <local:TitleTextBoxVertical TitleBackground="{Binding BorderBrush, ElementName=border}"
-                    TitleText="Action" TextValue="{Binding Info.ActionType}" Background="White"/>
-                
+                <local:TitleTextBoxVertical TitleBackground="{Binding Background, ElementName=borderMain}"
+                                            TitleText="Action"
+                                            TextValue="{Binding Info.ActionType}"
+                                            Background="White"
+                                            x:Name="TextBoxActionType" />
+
                 <!--Range-->
-                <local:TitleTextBoxVertical TitleBackground="{Binding BorderBrush, ElementName=border}"
-                    TitleText="Range" TextValue="{Binding Info.Range}" Background="White"/>
-                
+                <local:TitleTextBoxVertical TitleBackground="{Binding Background, ElementName=borderMain}"
+                                            TitleText="Range"
+                                            TextValue="{Binding Info.Range}"
+                                            Background="White"
+                                            x:Name="TextBoxRange" />
+
                 <!--Target-->
-                <local:TitleTextBoxVertical TitleBackground="{Binding BorderBrush, ElementName=border}"
-                    TitleText="Target" TextValue="{Binding Info.Target}" Background="White"/>
-                
+                <local:TitleTextBoxVertical TitleBackground="{Binding Background, ElementName=borderMain}"
+                                            TitleText="Target"
+                                            TextValue="{Binding Info.Target}"
+                                            Background="White"
+                                            x:Name="TextBoxTarget" />
+
             </StackPanel>
 
-            <StackPanel Orientation="Horizontal">
-                <!--Action Type-->
-                <local:TitleTextBoxVertical TitleBackground="{Binding BorderBrush, ElementName=border}"
-                    TitleText="Attack" TextValue="{Binding Info.AttackBonus}" Background="White"/>
+            <StackPanel Orientation="Horizontal"
+                        x:Name="AttackInfoPanel">
+                <!--AttackBonus-->
+                <local:TitleTextBoxVertical TitleBackground="{Binding Background, ElementName=borderMain}"
+                                            TitleText="Attack"
+                                            TextValue="{Binding Info.AttackBonus}"
+                                            Background="White"
+                                            x:Name="TextBoxAttackBonus" 
+                                            Visibility="{Binding DataContext}"/>
 
-                <Label Content="vs" VerticalAlignment="Center"/>
+                <Label Content="vs" 
+                       VerticalAlignment="Center"
+                       Visibility="{Binding Visibility, ElementName=TextBoxAttackBonus}" />
 
-                <!--Range-->
-                <local:TitleTextBoxVertical TitleBackground="{Binding BorderBrush, ElementName=border}"
-                    TitleText="Defense" TextValue="{Binding Info.Defense}" Background="White"/>
+                <!--Defense-->
+                <local:TitleTextBoxVertical TitleBackground="{Binding Background, ElementName=borderMain}"
+                                            TitleText="Defense"
+                                            TextValue="{Binding Info.DefenseStat}"
+                                            Background="White"
+                                            x:Name="TextBoxDefense" />
             </StackPanel>
 
-            <Label Content="{Binding Info.Description}"  Background="White"/>
+            <StackPanel x:Name="OtherPanel"
+                        Background="White">
+                <!--Description-->
+                <TextBox Text="{Binding Info.Description}"
+                         Background="{x:Null}"
+                         TextWrapping="Wrap"
+                         x:Name="Description"
+                         Style="{StaticResource Empty}"
+                         Visibility="{Binding Converter={StaticResource StringCheckToVisiblityConverter}, 
+                         Mode=OneWay, RelativeSource={RelativeSource Self}, Path=Text}" />
 
-            <StackPanel>
-                <ItemsControl ItemsSource="{Binding Attributes}">
-                    <ItemsControl.ItemTemplate>
-                        <DataTemplate>
-                            <local:TitleTextBox TitleText="{Binding Name}" TextValue="{Binding Info.Value}" Background="White"/>
-                        </DataTemplate>
-                    </ItemsControl.ItemTemplate>                    
-                </ItemsControl>
+                <!--Attributes-->
+                <StackPanel x:Name="AttributesPanel">
+                    <ItemsControl ItemsSource="{
+                        Binding RelativeSource={RelativeSource AncestorType=UserControl, Mode=FindAncestor}, 
+                        Path=DataContext.Attributes}">
+                        <ItemsControl.ItemTemplate>
+                            <DataTemplate>
+                                <local:TitleTextBox TitleText="{Binding Name}"
+                                                    TextValue="{Binding Text}"
+                                                    Background="White"
+                                                    Padding="5, 0" />
+                            </DataTemplate>
+                        </ItemsControl.ItemTemplate>
+                    </ItemsControl>
+                </StackPanel>
+
+                <!--Additional Info-->
+                <local:TitleTextBox TitleText="Additional Effects: " TextValue="{Binding Info.AdditionalEffects}" />
             </StackPanel>
-
-            <!--Additional Info-->
-            <local:TitleTextBox TitleText="Additional Effects: " 
-                TextValue="{Binding Info.AdditionalEffects, Converter={StaticResource StringArrayConverter}}" Background="White"/>
 
         </StackPanel>
     </Border>

@@ -12,7 +12,7 @@ namespace DaanV2.DND.UserControls {
         public event PropertyChangedEventHandler PropertyChanged;
 
         public AbilityScoreControl() {
-            Console.WriteLine($"{nameof(AbilityScoreControl)} Loaded");
+            
             this.Title = String.Empty;
             this.InitializeComponent();
         }

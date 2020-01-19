@@ -21,7 +21,7 @@ namespace DaanV2.DND.Converters {
         /// <returns></returns>
         public Object Convert(Object value, Type targetType, Object parameter, CultureInfo culture) {
             if (value is String Text) {
-                return String.IsNullOrEmpty(Text) ? Visibility.Visible : (Object)Visibility.Collapsed;
+                return String.IsNullOrEmpty(Text) ? (Object)Visibility.Collapsed : Visibility.Visible;
             }
 
             return value == null ? Visibility.Collapsed : (Object)Visibility.Visible;

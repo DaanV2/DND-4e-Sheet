@@ -8,7 +8,7 @@ namespace DaanV2.DND.UserControls {
         public Uses ViewModel { get => (Uses)this.DataContext; set => this.DataContext = value; }
 
         public UsesControlCheckboxes() {
-            Console.WriteLine($"{nameof(UsesControlCheckboxes)} Loaded");
+            
             this.InitializeComponent();
         }
 

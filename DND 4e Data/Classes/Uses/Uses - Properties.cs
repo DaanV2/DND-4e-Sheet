@@ -11,7 +11,7 @@ namespace DaanV2.DND {
         public Int32 Used { 
             get => this._Used;
             set {
-                if (value > -1 && value < this.Max) {
+                if (value > -1 && value <= this.Max) {
                     this._Used = value;
                     this.PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(this.Used)));
                 }

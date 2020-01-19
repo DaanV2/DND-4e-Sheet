@@ -14,8 +14,9 @@
     </Page.DataContext>
 
     <StackPanel Orientation="Horizontal">
-        <StackPanel>
+        <StackPanel Orientation="Vertical">
             <Button Content="New" x:Name="ButtonNewCharacter" Click="ButtonNewCharacter_Click"/>
+            <Button Content="Import" x:Name="ButtonImport" Click="ButtonImport_Click"/>
         </StackPanel>
 
         <ItemsControl ItemsSource="{Binding DataContext.Characters, ElementName=page}">
@@ -26,7 +27,7 @@
             </ItemsControl.ItemTemplate>
             <ItemsControl.ItemsPanel>
                 <ItemsPanelTemplate>
-                    <UniformGrid IsItemsHost="True" />
+                    <WrapPanel IsItemsHost="True" />
                 </ItemsPanelTemplate>
             </ItemsControl.ItemsPanel>
         </ItemsControl>

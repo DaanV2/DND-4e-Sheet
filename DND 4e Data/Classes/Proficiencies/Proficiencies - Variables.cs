@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 
 namespace DaanV2.DND {
-    public partial class PowerAttribute {
-        //DOLATER add variables to class PowerAttribute
+    public partial class Proficiencies {
+        //DOLATER add variables to class Proficiencies
     }
 }
